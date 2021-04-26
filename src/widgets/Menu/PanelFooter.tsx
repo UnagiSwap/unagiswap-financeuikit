@@ -32,9 +32,12 @@ const SocialEntry = styled.div`
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: 0 16px;
 `;
+
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
+  toggleTheme,
+  isDark,
   cakePriceUsd,
   currentLang,
   langs,
@@ -81,25 +84,6 @@ const PanelFooter: React.FC<Props> = ({
             );
           })}
         </Flex>
-        <Dropdown
-          target={
-            <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-              <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
-            </Button>
-          }
-        >
-          {langs.map((lang) => (
-            <MenuButton
-              key={lang.code}
-              fullWidth
-              onClick={() => setLang(lang)}
-              // Safari fix
-              style={{ minHeight: "32px", height: "auto" }}
-            >
-              {lang.language}
-            </MenuButton>
-          ))}
-        </Dropdown>
       </SocialEntry>
     </Container>
   );
