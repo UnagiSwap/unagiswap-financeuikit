@@ -16,34 +16,13 @@ import { PanelProps, PushedProps } from "./types";
 interface Props extends PanelProps, PushedProps {}
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
-const { MoonIcon, SunIcon, LanguageIcon } = Icons;
+const {  LanguageIcon } = Icons;
 
 const Container = styled.div`
   flex: none;
   padding: 8px 4px;
   background-color: ${({ theme }) => theme.nav.background};
   border-top: solid 2px rgba(133, 133, 133, 0.1);
-`;
-
-const PriceLink = styled.a`
-  display: flex;
-  align-items: center;
-  svg {
-    transition: transform 0.3s;
-  }
-  :hover {
-    svg {
-      transform: scale(1.2);
-    }
-  }
-`;
-
-const SettingsEntry = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
 `;
 
 const SocialEntry = styled.div`
@@ -57,13 +36,10 @@ const SocialEntry = styled.div`
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
-  toggleTheme,
-  isDark,
   cakePriceUsd,
   currentLang,
   langs,
   setLang,
-  priceLink,
 }) => {
   if (!isPushed) {
     return (
@@ -96,22 +72,7 @@ const PanelFooter: React.FC<Props> = ({
                       {item.label}
                     </Link>
                   ))}
-                
-                  <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-                    <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
-                  </Button>
-                {langs.map((lang) => (
-                  <MenuButton
-                    key={lang.code}
-                    fullWidth
-                    onClick={() => setLang(lang)}
-                    // Safari fix
-                    style={{ minHeight: "32px", height: "auto" }}
-                  >
-                    {lang.language}
-                  </MenuButton>
-                ))}
-              </Dropdown>
+                </Dropdown>
               );
             }
             return (
@@ -121,10 +82,26 @@ const PanelFooter: React.FC<Props> = ({
             );
           })}
         </Flex>
+        <Dropdown
+          target={
+            <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
+              <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
+            </Button>
+          }
+        >
+          {langs.map((lang) => (
+            <MenuButton
+              key={lang.code}
+              fullWidth
+              onClick={() => setLang(lang)}
+              // Safari fix
+              style={{ minHeight: "32px", height: "auto" }}
+            >
+              {lang.language}
+            </MenuButton>
+          ))}
+        </Dropdown>
       </SocialEntry>
-      <SettingsEntry>
-        
-      </SettingsEntry>
     </Container>
   );
 };
