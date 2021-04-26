@@ -32,7 +32,6 @@ const SocialEntry = styled.div`
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: 0 16px;
 `;
-
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
