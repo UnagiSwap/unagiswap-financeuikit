@@ -2157,7 +2157,7 @@ var links = [
             // },
             {
                 label: "Github",
-                href: "https://github.com/toadfarm/",
+                href: "https://github.com/UnagiSwap/",
             },
         ],
     },
@@ -2169,11 +2169,11 @@ var socials = [
         items: [
             {
                 label: "English",
-                href: "https://t.me/farmhubbsc",
+                href: "https://t.me/unagiSwapCommunity",
             },
             {
                 label: "Announcements",
-                href: "https://t.me/farmhubannouncements",
+                href: "https://t.me/unagiSwapFinance_announcement",
             },
         ],
     },
