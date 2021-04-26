@@ -74,7 +74,7 @@ const PanelFooter: React.FC<Props> = ({
                   ))}
                 </Dropdown>
               );
-            }
+                  }
             return (
               <Link external key={social.label} href={social.href} aria-label={social.label} mr={mr}>
                 <Icon {...iconProps} />
