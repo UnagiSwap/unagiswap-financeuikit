@@ -79,10 +79,7 @@ const PanelFooter: React.FC<Props> = ({
     <Container>
       <SocialEntry>
         {cakePriceUsd ? (
-          <PriceLink href={priceLink} target="_blank">
             <PancakeRoundIcon width="24px" mr="8px" />
-            <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(10)}`}</Text>
-          </PriceLink>
         ) : (
           <Skeleton width={80} height={24} />
         )}
