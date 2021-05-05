@@ -492,7 +492,7 @@ var Icon$11 = function (props) {
 var Icon$10 = function (props) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
     return (React.createElement(Svg, __assign({ viewBox: "0 0 90 90" }, props),
-        React.createElement("image", { width: "805", height: "80", href: isDark ? 'images/egg/LogoTextNewDark.png' : 'images/egg/LogoTextNewWhite.png' })));
+        React.createElement("image", { width: "90", height: "100", href: isDark ? 'https://www.unagiswap.finance/images/favicon.png' : 'https://www.unagiswap.finance/images/favicon.png' })));
 };
 
 var Icon$$ = function (props) {
@@ -625,7 +625,7 @@ var Icon$U = function (props) {
 
 var Icon$T = function (props) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 90 90" }, props),
+    return (React.createElement(Svg, __assign({ viewBox: "22 33 90 90" }, props),
         React.createElement("image", { width: "805", height: "60", href: isDark ? 'images/egg/LogoTextNewDark.png' : 'images/egg/LogoTextNewWhite.png' })));
 };
 
@@ -664,7 +664,7 @@ var Icon$R = function (props) {
 
 var Icon$Q = function (props) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 90 90" }, props),
+    return (React.createElement(Svg, __assign({ viewBox: "33 44 90 90" }, props),
         React.createElement("image", { width: "805", height: "80", href: isDark ? 'images/egg/LogoTextNewDark.png' : 'images/egg/LogoTextNewWhite.png' })));
 };
 
@@ -2983,7 +2983,7 @@ var Icon$i = function (props) {
 
 var Logo$2  = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 405 40" }, props),
+    return (React.createElement(Svg, __assign({ viewBox: "12 123 405 40" }, props),
         React.createElement("image", { width: "805", height: "60", href: isDark ? 'images/egg/LogoTextNewDark.png' : 'images/egg/LogoTextNewWhite.png' })));
 };
 var LogoWithText = React.memo(Logo$2, function (prev, next) { return prev.isDark === next.isDark; });
